@@ -4,25 +4,25 @@ release_branch: release/2026.10.01
 applications:
 - name: nextjs-app-1
   action: BUILD
-  git_commit: null
-  image: rajvam6806/nextjs-app-1@sha256:ba9c3715d6c0a95601c7700a3c07ce783ceb07ceb2c7fea784e2e1c206188b27
-  image_tag: 2026.10.01.5
-  image_digest: sha256:ba9c3715d6c0a95601c7700a3c07ce783ceb07ceb2c7fea784e2e1c206188b27
+  git_commit: 4a12f71a601105637899cb8247251efc9704e588
+  image: rajvam6806/nextjs-app-1@sha256:8685b98b461e636782776deaf9c9c8cfe272852fbe18d54ca524de374b2314b0
+  image_tag: 2026.10.01.6
+  image_digest: sha256:8685b98b461e636782776deaf9c9c8cfe272852fbe18d54ca524de374b2314b0
 - name: nextjs-app-2
   action: BUILD
-  git_commit: null
-  image: rajvam6806/nextjs-app-2@sha256:809294a0fb62ebdaeb70b2b6a5c283b82c7ff488fdc3ef55bede318f6b547899
-  image_tag: 2026.10.01.4
-  image_digest: sha256:809294a0fb62ebdaeb70b2b6a5c283b82c7ff488fdc3ef55bede318f6b547899
+  git_commit: d6c733e0a031abeb069ed6a611a793af2c68d2c5
+  image: rajvam6806/nextjs-app-2@sha256:c3de06584547eee3710c53feff44791e4e1d785795756217558a8496604053f4
+  image_tag: 2026.10.01.5
+  image_digest: sha256:c3de06584547eee3710c53feff44791e4e1d785795756217558a8496604053f4
 - name: springboot-app-1
   action: BUILD
-  git_commit: null
+  git_commit: 84378026fb36e1f09d0631770c6eaf9f8aa08e44
   image: rajvam6806/springboot-app-1@sha256:30fb73b2d65d70b02aa872e4200250441833a2b6b7fc7ab26673e727a053a0df
-  image_tag: 2026.10.01.4
+  image_tag: 2026.10.01.5
   image_digest: sha256:30fb73b2d65d70b02aa872e4200250441833a2b6b7fc7ab26673e727a053a0df
 - name: springboot-app-2
   action: BUILD
-  git_commit: null
+  git_commit: 824483370aa7cb16f2cd4c07a71eaa21ea60dff5
   image: rajvam6806/springboot-app-2@sha256:a87b288431d323f54c5ebc2f2ce3a544dba18b9413f875976adc509c94025ff3
-  image_tag: 2026.10.01.4
+  image_tag: 2026.10.01.5
   image_digest: sha256:a87b288431d323f54c5ebc2f2ce3a544dba18b9413f875976adc509c94025ff3
