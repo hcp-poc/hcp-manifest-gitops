@@ -7,12 +7,12 @@ applications:
   git:
     repository: https://github.com/hcp-poc/nextjs-app-1.git
     branch: release/2026.10.02
-    commit: ''
+    commit: 4a12f71a601105637899cb8247251efc9704e588
     commits_since_previous_release: []
   jenkins:
     job: UAT/build-applications/nextjs-app-1-build
     build_number: ''
-    build_result: SKIPPED
+    build_result: REUSED
   image:
     repository: rajvam6806/nextjs-app-1
     tag: 2026.10.01.6
@@ -22,35 +22,27 @@ applications:
   git:
     repository: https://github.com/hcp-poc/nextjs-app-2.git
     branch: release/2026.10.02
-    commit: ''
+    commit: d6c733e0a031abeb069ed6a611a793af2c68d2c5
     commits_since_previous_release: []
   jenkins:
     job: UAT/build-applications/nextjs-app-2-build
     build_number: ''
-    build_result: SKIPPED
+    build_result: REUSED
   image:
     repository: rajvam6806/nextjs-app-2
     tag: 2026.10.01.5
     digest: sha256:c3de06584547eee3710c53feff44791e4e1d785795756217558a8496604053f4
 - name: springboot-app-1
-  action: BUILD
+  action: SKIP
   git:
     repository: https://github.com/hcp-poc/springboot-app-1.git
     branch: release/2026.10.02
     commit: b0ac5f1946e5c721ea6ed563cf4197811dff7543
-    commits_since_previous_release:
-    - commit: b0ac5f1946e5c721ea6ed563cf4197811dff7543
-      message: 'Merge pull request #1 from hcp-poc/dev'
-    - commit: 3f0a843bc58832078216508b78d246f4b9cb577a
-      message: Update Spring Boot parent version to 4.1.1
-    - commit: 1916f2af963432d570009b067e3b894642e05cd1
-      message: Change server port from 8000 to 8080
-    - commit: e3e4380a3666e3d93aca94bcc1c11d351a515a4d
-      message: Remove unnecessary blank lines in Dockerfile
+    commits_since_previous_release: []
   jenkins:
     job: UAT/build-applications/springboot-app-1-build
     build_number: 6
-    build_result: SUCCESS
+    build_result: REUSED
   image:
     repository: rajvam6806/springboot-app-1
     tag: 2026.10.02.6
@@ -60,12 +52,12 @@ applications:
   git:
     repository: https://github.com/hcp-poc/springboot-app-2.git
     branch: release/2026.10.02
-    commit: ''
+    commit: 824483370aa7cb16f2cd4c07a71eaa21ea60dff5
     commits_since_previous_release: []
   jenkins:
     job: UAT/build-applications/springboot-app-2-build
     build_number: ''
-    build_result: SKIPPED
+    build_result: REUSED
   image:
     repository: rajvam6806/springboot-app-2
     tag: 2026.10.01.5
