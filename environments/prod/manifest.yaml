@@ -1,11 +1,11 @@
 environment: prod
-release: 2026.10.02
+release: 2026.10.03
 applications:
 - name: nextjs-app-1
-  image: rajvam6806/nextjs-app-1@sha256:8685b98b461e636782776deaf9c9c8cfe272852fbe18d54ca524de374b2314b0
-  image_tag: 2026.10.01.6
-  image_digest: sha256:8685b98b461e636782776deaf9c9c8cfe272852fbe18d54ca524de374b2314b0
-  git_commit: 4a12f71a601105637899cb8247251efc9704e588
+  image: rajvam6806/nextjs-app-1@sha256:ec633163c7f9e251a34ee0d478e055894abb0f01ae5e436be1508395efebc3c7
+  image_tag: 2026.10.03.7
+  image_digest: sha256:ec633163c7f9e251a34ee0d478e055894abb0f01ae5e436be1508395efebc3c7
+  git_commit: bf469fda7d7cb975344dc5d18cff9089c4e48c14
 - name: nextjs-app-2
   image: rajvam6806/nextjs-app-2@sha256:c3de06584547eee3710c53feff44791e4e1d785795756217558a8496604053f4
   image_tag: 2026.10.01.5
