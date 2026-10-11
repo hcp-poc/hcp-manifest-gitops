@@ -1,0 +1,86 @@
+release: 2026.10.02
+environment: uat
+release_branch: release/2026.10.02
+applications:
+- name: nextjs-app-1
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-1.git
+    branch: release/2026.10.02
+    commit: 4a12f71a601105637899cb8247251efc9704e588
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-1-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-1
+    tag: 2026.10.01.2
+    digest: rajvam6806/nextjs-app-1@sha256:9db87a88f9552d4ed8d4a99c9c645c4ce3014c10fe168a62522f26c72836cebd
+- name: nextjs-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-2.git
+    branch: release/2026.10.02
+    commit: d6c733e0a031abeb069ed6a611a793af2c68d2c5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-2
+    tag: 2026.10.01.2
+    digest: rajvam6806/nextjs-app-2@sha256:f644abb3038428bbf9d75f0127926d675670d8cb407f26217fdfc7c3000bdd80
+- name: springboot-app-1
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-1.git
+    branch: release/2026.10.02
+    commit: 7b52928c1d300310870fb7224ce215811b466684
+    commits_since_previous_release:
+    - commit: 7b52928c1d300310870fb7224ce215811b466684
+      message: 'Merge pull request #5 from hcp-poc/dev'
+    - commit: fb27077b8759ff4b01281e2fa998d1573abe2fb1
+      message: Add groupId, artifactId, and version to pom.xml
+    - commit: e3875cc2bd2268545d0149a0130a3e36322deb5a
+      message: 'Merge pull request #3 from hcp-poc/dev'
+    - commit: 0f1859526d5c75b3779c839ec3b49f296801900e
+      message: 'Merge pull request #2 from hcp-poc/main'
+    - commit: e5f14531f4e2b13f1f2f2a42b8f7b1e4de6de707
+      message: Update Dockerfile to specify Java 21 for JAR build
+    - commit: 7baca3e84577e634ad0cdeb5a1d6e178facb7a5b
+      message: Fix formatting in pom.xml for spring-boot plugin
+    - commit: b0ac5f1946e5c721ea6ed563cf4197811dff7543
+      message: 'Merge pull request #1 from hcp-poc/dev'
+    - commit: 3f0a843bc58832078216508b78d246f4b9cb577a
+      message: Update Spring Boot parent version to 4.1.1
+    - commit: 1916f2af963432d570009b067e3b894642e05cd1
+      message: Change server port from 8000 to 8080
+    - commit: e3e4380a3666e3d93aca94bcc1c11d351a515a4d
+      message: Remove unnecessary blank lines in Dockerfile
+    - commit: c6f44f51b3ef17ea41a1b09255e23ff0b981b9e7
+      message: Remove unnecessary blank lines in Dockerfile
+  jenkins:
+    job: UAT/build-applications/springboot-app-1-build
+    build_number: '3'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-1
+    tag: 2026.10.02.3
+    digest: rajvam6806/springboot-app-1@sha256:8e8356719f04f6298961b97c885e7778e8ce2fba198a5451b87ca25863a523d3
+- name: springboot-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-2.git
+    branch: release/2026.10.02
+    commit: 824483370aa7cb16f2cd4c07a71eaa21ea60dff5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/springboot-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/springboot-app-2
+    tag: 2026.10.01.2
+    digest: rajvam6806/springboot-app-2@sha256:4ff4d1157b38c9daa18faa377c7ce9d4b24ac765cc4685f0e700a77bf9c54986
