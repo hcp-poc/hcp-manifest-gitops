@@ -1,11 +1,11 @@
 environment: uat
-release: 2026.10.03
+release: 2026.10.04
 applications:
 - name: nextjs-app-1
-  image: rajvam6806/nextjs-app-1@sha256:d809189c452bc4a63af96840229e0823c3421e251126bca2775aef66723c7534
-  image_tag: 2026.10.03.3
-  image_digest: rajvam6806/nextjs-app-1@sha256:d809189c452bc4a63af96840229e0823c3421e251126bca2775aef66723c7534
-  git_commit: 0c693977fc3b1d1b957df2c37ca0446a57fd7f83
+  image: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
+  image_tag: 2026.10.04.4
+  image_digest: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
+  git_commit: e6b330ef928daa17aafff295bf4afa0e1dcac3e8
 - name: nextjs-app-2
   image: rajvam6806/nextjs-app-2@sha256:f644abb3038428bbf9d75f0127926d675670d8cb407f26217fdfc7c3000bdd80
   image_tag: 2026.10.01.2
