@@ -1,3 +1,5 @@
 successfulReleases:
-  - version: "2026.10.01"
-    status: "SUCCESS"
+- version: 2026.10.01
+  status: SUCCESS
+- version: 2026.10.02
+  status: SUCCESS
