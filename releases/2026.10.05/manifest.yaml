@@ -1,0 +1,68 @@
+release: 2026.10.05
+environment: uat
+release_branch: release/2026.10.05
+applications:
+- name: nextjs-app-1
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-1.git
+    branch: release/2026.10.05
+    commit: e6b330ef928daa17aafff295bf4afa0e1dcac3e8
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-1-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-1
+    tag: 2026.10.04.4
+    digest: sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
+- name: nextjs-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-2.git
+    branch: release/2026.10.05
+    commit: d6c733e0a031abeb069ed6a611a793af2c68d2c5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-2
+    tag: 2026.10.01.2
+    digest: sha256:f644abb3038428bbf9d75f0127926d675670d8cb407f26217fdfc7c3000bdd80
+- name: springboot-app-1
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-1.git
+    branch: release/2026.10.05
+    commit: ecdae2e240af330b103fc0eb24ac41e1efd9ddba
+    commits_since_previous_release:
+    - commit: ecdae2e240af330b103fc0eb24ac41e1efd9ddba
+      message: 'Merge pull request #6 from hcp-poc/dev'
+    - commit: a4fe996cd67815f4e803a3446f8e4bf287f59b3b
+      message: Fix formatting in pom.xml
+  jenkins:
+    job: UAT/build-applications/springboot-app-1-build
+    build_number: '5'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-1
+    tag: 2026.10.05.5
+    digest: rajvam6806/springboot-app-1@sha256:45fd22de7b34239515d9059e84345ceb9de311ab88ea35ffff4dbc54ed24e32b
+- name: springboot-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-2.git
+    branch: release/2026.10.05
+    commit: 824483370aa7cb16f2cd4c07a71eaa21ea60dff5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/springboot-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/springboot-app-2
+    tag: 2026.10.01.2
+    digest: sha256:4ff4d1157b38c9daa18faa377c7ce9d4b24ac765cc4685f0e700a77bf9c54986
