@@ -1,5 +1,5 @@
 environment: prod
-release: 2026.10.05
+release: 2026.10.06
 applications:
 - name: nextjs-app-1
   image: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
