@@ -5,3 +5,5 @@ successfulReleases:
   status: SUCCESS
 - version: 2026.10.03
   status: SUCCESS
+- version: 2026.10.04
+  status: SUCCESS
