@@ -1,0 +1,76 @@
+release: 2026.10.03
+environment: uat
+release_branch: release/2026.10.03
+applications:
+- name: nextjs-app-1
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-1.git
+    branch: release/2026.10.03
+    commit: 0c693977fc3b1d1b957df2c37ca0446a57fd7f83
+    commits_since_previous_release:
+    - commit: 0c693977fc3b1d1b957df2c37ca0446a57fd7f83
+      message: Remove unnecessary newline in Dockerfile
+    - commit: dc933c6fecc91c8c52ae355008d60b5b8f8aa82e
+      message: 'Merge pull request #5 from hcp-poc/main'
+    - commit: a63d6812919fc5b96897132fb875aa3f3098ef6e
+      message: Update Dockerfile to use node:22-alpine
+    - commit: 464001f8cc4a8b7bda8bb817f0e8ca8e95b6252f
+      message: 'Merge pull request #4 from hcp-poc/qa'
+    - commit: b253f77a1fa8910cf5b63dfaa9319aa84dec70d7
+      message: Update Dockerfile
+    - commit: 8d0d949dbc19b96f40a978c815733221c8d290b5
+      message: 'Merge pull request #2 from hcp-poc/qa'
+  jenkins:
+    job: UAT/build-applications/nextjs-app-1-build
+    build_number: '3'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/nextjs-app-1
+    tag: 2026.10.03.3
+    digest: rajvam6806/nextjs-app-1@sha256:d809189c452bc4a63af96840229e0823c3421e251126bca2775aef66723c7534
+- name: nextjs-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-2.git
+    branch: release/2026.10.03
+    commit: d6c733e0a031abeb069ed6a611a793af2c68d2c5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-2
+    tag: 2026.10.01.2
+    digest: sha256:f644abb3038428bbf9d75f0127926d675670d8cb407f26217fdfc7c3000bdd80
+- name: springboot-app-1
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-1.git
+    branch: release/2026.10.03
+    commit: 7b52928c1d300310870fb7224ce215811b466684
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/springboot-app-1-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/springboot-app-1
+    tag: 2026.10.02.3
+    digest: sha256:8e8356719f04f6298961b97c885e7778e8ce2fba198a5451b87ca25863a523d3
+- name: springboot-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-2.git
+    branch: release/2026.10.03
+    commit: 824483370aa7cb16f2cd4c07a71eaa21ea60dff5
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/springboot-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/springboot-app-2
+    tag: 2026.10.01.2
+    digest: sha256:4ff4d1157b38c9daa18faa377c7ce9d4b24ac765cc4685f0e700a77bf9c54986
