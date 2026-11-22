@@ -1,0 +1,76 @@
+release: 2026.10.08
+environment: uat
+release_branch: release/2026.10.08
+applications:
+- name: nextjs-app-1
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-1.git
+    branch: release/2026.10.08
+    commit: e6b330ef928daa17aafff295bf4afa0e1dcac3e8
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-1-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-1
+    tag: 2026.10.04.4
+    digest: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
+- name: nextjs-app-2
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-2.git
+    branch: release/2026.10.08
+    commit: f12ee1345b0fe7e835d13ba064359b66882f79d3
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-2-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-2
+    tag: 2026.10.07.5
+    digest: rajvam6806/nextjs-app-2@sha256:fac49f77cb44b6aa97af4908164e67279d271e8948e898f7107c7576bb6d1a5c
+- name: springboot-app-1
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-1.git
+    branch: release/2026.10.08
+    commit: 60b75f4854e80e5904204f070ff0501a2b0ef481
+    commits_since_previous_release:
+    - commit: 070caafc191e6bece20ce610fb6852ffd210a420
+      message: Update pom.xml
+    - commit: 13036c52f2180c2d5269108017cfb4a9569425ae
+      message: 'Merge pull request #7 from hcp-poc/dev'
+    - commit: 60b75f4854e80e5904204f070ff0501a2b0ef481
+      message: 'Merge pull request #8 from hcp-poc/qa'
+  jenkins:
+    job: UAT/build-applications/springboot-app-1-build
+    build_number: '9'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-1
+    tag: 2026.10.08.9
+    digest: rajvam6806/springboot-app-1@sha256:c5ad04f7a27b00a191520da08ccfb7d90c302c9743609f3fdf44cb7216eff35f
+- name: springboot-app-2
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-2.git
+    branch: release/2026.10.08
+    commit: 796e8b6a70002d38c57122e1a62480ee4a3274c5
+    commits_since_previous_release:
+    - commit: 610a2fa0363d076c9015b08770429fc1aea3ec9d
+      message: Improve readability by adding a blank line
+    - commit: 514b3a4e10d07d28a9c07c88eac9832481593108
+      message: 'Merge pull request #2 from hcp-poc/dev'
+    - commit: 796e8b6a70002d38c57122e1a62480ee4a3274c5
+      message: 'Merge pull request #3 from hcp-poc/qa'
+  jenkins:
+    job: UAT/build-applications/springboot-app-2-build
+    build_number: '8'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-2
+    tag: 2026.10.08.8
+    digest: rajvam6806/springboot-app-2@sha256:54d09986a38b906170f1b086a98d7204b8a07f22241dce37cae52f50d47d7335
