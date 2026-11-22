@@ -1,0 +1,72 @@
+release: 2026.10.07
+environment: uat
+release_branch: release/2026.10.07
+applications:
+- name: nextjs-app-1
+  action: SKIP
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-1.git
+    branch: release/2026.10.07
+    commit: e6b330ef928daa17aafff295bf4afa0e1dcac3e8
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-1-build
+    build_number: ''
+    build_result: SKIPPED
+  image:
+    repository: rajvam6806/nextjs-app-1
+    tag: 2026.10.04.4
+    digest: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
+- name: nextjs-app-2
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/nextjs-app-2.git
+    branch: release/2026.10.07
+    commit: f12ee1345b0fe7e835d13ba064359b66882f79d3
+    commits_since_previous_release: []
+  jenkins:
+    job: UAT/build-applications/nextjs-app-2-build
+    build_number: '5'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/nextjs-app-2
+    tag: 2026.10.07.5
+    digest: rajvam6806/nextjs-app-2@sha256:fac49f77cb44b6aa97af4908164e67279d271e8948e898f7107c7576bb6d1a5c
+- name: springboot-app-1
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-1.git
+    branch: release/2026.10.07
+    commit: ecdae2e240af330b103fc0eb24ac41e1efd9ddba
+    commits_since_previous_release:
+    - commit: a4fe996cd67815f4e803a3446f8e4bf287f59b3b
+      message: Fix formatting in pom.xml
+    - commit: ecdae2e240af330b103fc0eb24ac41e1efd9ddba
+      message: 'Merge pull request #6 from hcp-poc/dev'
+  jenkins:
+    job: UAT/build-applications/springboot-app-1-build
+    build_number: '8'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-1
+    tag: 2026.10.07.8
+    digest: rajvam6806/springboot-app-1@sha256:4b87cf699ab10aca11f8bb922b755c46f2630fb844e6b4a308349ce3479a9245
+- name: springboot-app-2
+  action: BUILD
+  git:
+    repository: https://github.com/hcp-poc/springboot-app-2.git
+    branch: release/2026.10.07
+    commit: fb15e58969e8f5533790fc49057b65e17503e411
+    commits_since_previous_release:
+    - commit: 822a344da914e3ac375b458735017b9cf2f8af8a
+      message: Remove extra newline in Dockerfile
+    - commit: fb15e58969e8f5533790fc49057b65e17503e411
+      message: 'Merge pull request #1 from hcp-poc/dev'
+  jenkins:
+    job: UAT/build-applications/springboot-app-2-build
+    build_number: '7'
+    build_result: SUCCESS
+  image:
+    repository: rajvam6806/springboot-app-2
+    tag: 2026.10.07.7
+    digest: rajvam6806/springboot-app-2@sha256:54d09986a38b906170f1b086a98d7204b8a07f22241dce37cae52f50d47d7335
