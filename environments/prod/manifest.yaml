@@ -1,5 +1,5 @@
 environment: prod
-release: 2026.10.08
+release: 2026.10.09
 applications:
 - name: nextjs-app-1
   image: rajvam6806/nextjs-app-1@sha256:c38808d3e2f14b949360a11027989e45f4d66bd341849e21fe294060e26f515e
@@ -12,10 +12,10 @@ applications:
   image_digest: sha256:fac49f77cb44b6aa97af4908164e67279d271e8948e898f7107c7576bb6d1a5c
   git_commit: f12ee1345b0fe7e835d13ba064359b66882f79d3
 - name: springboot-app-1
-  image: rajvam6806/springboot-app-1@sha256:c5ad04f7a27b00a191520da08ccfb7d90c302c9743609f3fdf44cb7216eff35f
-  image_tag: 2026.10.08.9
-  image_digest: sha256:c5ad04f7a27b00a191520da08ccfb7d90c302c9743609f3fdf44cb7216eff35f
-  git_commit: 60b75f4854e80e5904204f070ff0501a2b0ef481
+  image: rajvam6806/springboot-app-1@sha256:6acd6aacd745275f0efaab657c6942cbf04af0321d742334fc0b91817b5947e0
+  image_tag: 2026.10.09.10
+  image_digest: sha256:6acd6aacd745275f0efaab657c6942cbf04af0321d742334fc0b91817b5947e0
+  git_commit: 137ccd60c7af307b4edba05cb0b5c079134f805e
 - name: springboot-app-2
   image: rajvam6806/springboot-app-2@sha256:54d09986a38b906170f1b086a98d7204b8a07f22241dce37cae52f50d47d7335
   image_tag: 2026.10.08.8
